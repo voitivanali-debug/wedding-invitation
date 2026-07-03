@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Приглашение на свадьбу Максима и Валерии</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        /* Подключаем Passions Conflict RUS через стабильный CDN */
+        /* ШРИФТ PASSIONS CONFLICT RUS ВШИТ НАПРЯМУЮ В ВИДЕ ТЕКСТА BASE64 (ВЕСИТ ВСЕГО 16 КБ) */
         @font-face {
             font-family: 'Passions Conflict RUS';
-            src: url('https://jsdelivr.net') format('woff2'),
-                 url('https://jsdelivr.net') format('woff');
+            src: url('data:font/woff2;charset=utf-8;base64,d09GMgABAAAAAAwMAAsAAAAAFmQAAAu4AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAADG4YBhgkgwI0NzYKbAALCDoEghcEIBEICocYiywbYgV3YxtmZfUfSRE6E39UfAnZtoDsyGZ9Xm8EERMRE0pEREQpIiIiIiL66mF3fBf6pbeKvhgRERHLstS6bOtSlmWp99eKff/eGZ47v6rMqm/VqnN1qVwZ6v9fdfV6U7Xesb0UInwQEY6bBf4MREw4Ew7Fw5lgfV/677/Fv07/B0kMkgR7A7Y7I6kUoAAV8AuwAF/Yf8wYjAEFmAAaEAEaIEVigATgAFvOAKZIBNAlZIB7Wf+4K+0D6AnovfFAnY7gU54b/E/+63v/fPfe+1uG7/098bVfBqH3t+q9v/VwAOn00wCn08/w03v6GfrpZ3gYffMwDP1h+Bng6fS74df/6Xf7b/wZfhrg6fTTPK/9NPAwTPOMYcb7aYCn76fDT/M0/+n6fhp9w9D9NAzDfIahA6bphxm+gT7M9D9dP0Pf0HcaYIDTMM/fAEPfTz/D0wDT9A0DTzNMcxjgNMynAR7m0wDD/6fvf/p+fIapAwA=') format('woff2');
             font-weight: normal;
             font-style: normal;
-            font-display: swap;
+            font-display: block;
         }
 
         :root {
             --bg-light: #fdfbf7;
             --burgundy: #7a1c1c;
             --text-dark: #2c2c2c;
-            --text-muted: #555;
             --gold: #c5a059;
+            
+            --font-headers: 'Passions Conflict RUS', 'Georgia', serif;
+            --font-text: 'Georgia', serif;
+        }
             
             /* Разделяем шрифты по вашему запросу */
             --font-headers: 'Passions Conflict RUS', 'Times New Roman', cursive;
@@ -70,7 +69,7 @@
         .photo-holder { 
             width: 100%; 
             height: 480px; /* Увеличено в длину для вертикального кадра */
-            background: #e0e0e0 url('https://cdn.imgchest.com/files/9b44da0f5186.jpg') center/cover no-repeat; 
+            background: #e0e0e0 url('https://cdn.imgchest.com/files/9f4e4e12197e.jpg') center/cover no-repeat; 
             margin-bottom: 25px; 
             filter: grayscale(15%); 
         }
@@ -131,7 +130,7 @@
         
         <div class="timeline-item">
             <div class="timeline-time">17:00</div>
-            <div class="dress-code-text">Вечеринка у бассейна в кругу друзей</div>
+            <div class="dress-code-text">Вечеринка у бассейна в кругу друзей. Возьмите с собой купальник и тапочки! И если хотите поддержать молодую семью, то принимаем конверты</div>
         </div>
 
         <div class="font-passions-white" style="font-size: 56px; margin-top: 40px; margin-bottom: 10px;">Дресс-код</div>
@@ -177,7 +176,7 @@
 
     <script>
         // СЮДА ВСТАВЬТЕ ВАШУ ССЫЛКУ НА GOOGLE WEB APP
-        const googleScriptUrl = 'https://docs.google.com/spreadsheets/d/1XbmlngtgDEYTvFXphWg5ILk5xF-SE4TYnAvViKFQicE/edit?usp=sharing'; 
+        const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbwawirSN3EjHOC9Rb7Srdk3ms64Cc7xlqhoyYcWeN0NfL9Dj3049kVsEapgzzz1pp1psg/exec'; 
         
         // СЮДА ВСТАВЬТЕ ССЫЛКУ НА ВАШ ЧАТ ВКОНТАКТЕ
         const vkChatUrl = 'https://vk.me/join/6SmN4yYMrNcYC8vFU700mVg2nHpcLIrK9OE='; 
