@@ -6,29 +6,40 @@
     <title>Приглашение на свадьбу Максима и Валерии</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Great+Vibes&family=Marck+Script&display=swap" rel="stylesheet">
-    
+    <link href="https://googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     <style>
+        /* Подключаем Passions Conflict RUS через стабильный CDN */
+        @font-face {
+            font-family: 'Passions Conflict RUS';
+            src: url('https://jsdelivr.net') format('woff2'),
+                 url('https://jsdelivr.net') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
         :root {
             --bg-light: #fdfbf7;
             --burgundy: #7a1c1c;
             --text-dark: #2c2c2c;
+            --text-muted: #555;
             --gold: #c5a059;
             
-            /* Назначаем шрифты глобально согласно вашему запросу */
-            --font-headers: 'Great Vibes', Georgia, serif;
-            --font-text: 'Marck Script', 'Times New Roman', cursive;
+            /* Разделяем шрифты по вашему запросу */
+            --font-headers: 'Passions Conflict RUS', 'Times New Roman', cursive;
+            --font-text: 'Lora', 'Georgia', serif;
         }
         
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { 
-            font-family: var(--font-text); 
+            font-family: var(--font-text) !important; 
             background-color: #e2dbd5; 
             color: var(--text-dark); 
             display: flex; 
             justify-content: center; 
             padding: 10px;
-            font-size: 18px; /* Немного увеличили размер для рукописного шрифта, чтобы он легко читался */
+            font-size: 30px; 
+            -webkit-font-smoothing: antialiased;
         }
         
         .mobile-container { 
@@ -41,17 +52,19 @@
         
         .section-white { padding: 45px 20px; text-align: center; background-color: var(--bg-light); }
         
-        /* Заголовки шрифтом Great Vibes */
-        .date-header { font-family: var(--font-headers); font-size: 46px; font-weight: 500; color: #fff; margin-bottom: 25px; }
-        .names { font-family: var(--font-headers); font-size: 56px; color: var(--burgundy); line-height: 1.1; margin: 15px 0; }
-        .font-passions { font-family: var(--font-headers); font-size: 48px; color: var(--burgundy); margin-bottom: 15px; }
-        .font-passions-white { font-family: var(--font-headers); font-size: 52px; color: #fff; margin-bottom: 20px; }
+       
+	.date-header { font-family: 'Passions Conflict RUS', cursive; font-size: 64px; color: #fff; margin-top: 25px; margin-bottom: 5px; line-height: 1; }
+	.names { font-family: 'Passions Conflict RUS', cursive; font-size: 85px; color: var(--burgundy); line-height: 1; margin: 15px 0 5px 0; }
+	.font-passions { font-family: 'Passions Conflict RUS', cursive; font-size: 62px; color: var(--burgundy); margin-bottom: 10px; line-height: 1; }
+	.font-passions-white { font-family: 'Passions Conflict RUS', cursive; font-size: 90px; color: #fff; margin-top: 35px; margin-bottom: 10px; line-height: 1; }
 
-        /* Весь обычный текст теперь Marck Script */
-        .description { font-size: 19px; line-height: 1.6; color: var(--text-dark); margin-bottom: 30px; padding: 0 10px; }
-        .dress-code-text { font-size: 18px; line-height: 1.6; opacity: 0.95; margin-bottom: 25px; }
-        .timeline-desc { font-size: 19px; opacity: 0.95; line-height: 1.5; }
-        label { display: block; font-size: 16px; margin-bottom: 8px; color: var(--burgundy); text-align: left; }
+
+	.description { font-family: 'Lora', Georgia, serif !important; font-size: 15px; line-height: 1.7; color: var(--text-dark); margin-bottom: 25px; padding: 0 10px; }
+	.dress-code-text { font-family: 'Lora', Georgia, serif !important; font-size: 15px; line-height: 1.7; opacity: 0.95; margin-bottom: 25px; }
+	.timeline-desc { font-family: 'Lora', Georgia, serif !important; font-size: 15px; opacity: 0.95; line-height: 1.6; }
+	label { font-family: 'Lora', Georgia, serif !important; display: block; font-size: 13px; font-weight: bold; margin-bottom: 8px; color: var(--burgundy); text-align: left; text-transform: uppercase; letter-spacing: 1px; }
+
+
 
         /* Увеличенная в длину вертикальная фото-зона */
         .photo-holder { 
@@ -67,15 +80,15 @@
 
 
         /* Секция с расписанием и дресс-кодом */
-        .section-burgundy { background-color: var(--burgundy); color: #fff; padding: 40px 25px; text-align: center; }
+        .section-burgundy { background-color: var(--burgundy); color: #fff; padding: 15px 25px; text-align: center; }
         
         /* Таймлайн */
         .timeline-item { margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-        .timeline-time { font-weight: 600; font-size: 16px; color: var(--gold); margin-bottom: 5px; }
-        .timeline-desc { font-size: 14px; opacity: 0.9; }
+        .timeline-time { font-weight: 600; font-size: 30px; color: var(--gold); margin-bottom: 5px; }
+        .timeline-desc { font-size: 18px; opacity: 0.9; }
 
         /* Дресс-код */
-        .dress-code-text { font-size: 13px; line-height: 1.6; opacity: 0.8; margin-bottom: 20px; }
+        .dress-code-text { font-size: 20px; line-height: 1.6; opacity: 0.8; margin-bottom: 20px; }
         .color-palette { display: flex; justify-content: center; gap: 20px; margin: 20px 0 35px 0; }
         /* Красивые круглые плашки */
         .color-circle { width: 45px; height: 45px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.1); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
@@ -94,72 +107,73 @@
 
     <div class="mobile-container">
         
-        <!-- БЛОК 1: ПРИГЛАШЕНИЕ -->
-        <div class="section-white">
-            <div class="date-header">22 . 08 . 2026</div>
-            <div class="photo-holder"></div>
-            <div class="names">Максим & Валерия</div>
-            <div class="font-passions">Приглашение</div>
-            <p class="description">Дорогие! Это очень важный этап в нашей истории и мы будем рады разделить его с вами.</p>
-        </div>
-
-        <!-- БЛОК 2: МЕСТО И ДРЕСС-КОД (БОРДОВЫЙ) -->
-        <div class="section-burgundy">
-            <div class="font-passions-white" style="font-size: 40px;">22.08.2026</div>
-            
-            <div class="timeline-item">
-                <div class="timeline-time">13:00</div>
-                <div class="timeline-desc">Торжественная роспись, на которой мы очень хотим быть в окружении любящих людей</div>
-            </div>
-
-	<div class="section-burgundy">
-            <div class="font-passions-white" style="font-size: 40px;">23.08.2026</div>
-	<div class="photo-holder-2"></div>
-            <div class="timeline-item">
-                <div class="timeline-time">15:00</div>
-                <div class="timeline-desc">Вечеринка у бассейна в кругу друзей</div>
-            </div>
-
-            <div class="font-passions-white" style="font-size: 40px; margin-top: 40px; margin-bottom: 10px;">Дресс-код</div>
-            <p class="dress-code-text">Мы хотим создать гармоничную атмосферу, поэтому просим вас поддержать цветовую гамму нашей свадьбы в ваших нарядах:</p>
-            
-            <div class="color-palette">
-                <!-- 3 кружка палитры по вашему запросу -->
-                <div class="color-circle" style="background-color: #F8E5D1;" title="Белый"></div>
-                <div class="color-circle" style="background-color: #EED6B5;" title="Бежевый"></div>
-                <div class="color-circle" style="background-color: #654229;" title="Коричневый"></div> 
-            </div>
-        </div>
-
-        <!-- БЛОК 3: АНКЕТА ГОСТЯ -->
-        <div class="section-white" style="background-color: #f7f3ed;">
-            <div class="font-passions" style="font-size: 64px; margin-bottom: 5px;">Анкета гостя</div>
-            <p class="description" style="margin-bottom: 25px;">Пожалуйста, ответьте на вопросы ниже, чтобы мы могли сделать праздник комфортнее.</p>
-
-            <form id="weddingForm">
-                <div class="form-group">
-                    <label for="name">Ваше Имя и Фамилия</label>
-                    <input type="text" id="name" required placeholder="Иван и Мария">
-                </div>
-
-                <div class="form-group">
-                    <label for="attendance">Планируете присутствовать?</label>
-                    <select id="attendance" required>
-                        <option value="Да, я еду">Да, я еду</option>
-                        <option value="К сожалению, не смогу">К сожалению, не смогу</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="drinks">Что предпочитаете из напитков?</label>
-                    <textarea id="drinks" rows="3" required placeholder="Например: сухое белое вино, виски, яблочный сок..."></textarea>
-                </div>
-
-                <button type="submit">Отправить ответ</button>
-            </form>
-        </div>
-
+    <!-- БЛОК 1: ПРИГЛАШЕНИЕ -->
+    <div class="section-white">
+        <!-- ИСПРАВЛЕНО: Класс заменен на font-passions, чтобы дата была бордовой и видимой -->
+        <div class="font-passions" style="font-size: 52px; margin-bottom: 20px;">22 . 08 . 2026</div>
+        <div class="photo-holder"></div>
+        <div class="names">Максим & Валерия</div>
+        <div class="font-passions">Приглашение</div>
+        <p class="dress-code-text">Дорогие! Это очень важный этап в нашей истории и мы будем рады разделить его с вами.</p>
     </div>
+
+    <!-- БЛОК 2: МЕСТО И ДРЕСС-КОД (БОРДОВЫЙ) -->
+    <div class="section-burgundy">
+        <div class="font-passions-white" style="font-size: 52px;">22.08.2026</div>
+        
+        <div class="timeline-item">
+            <div class="timeline-time">12:45</div>
+            <div class="dress-code-text">Торжественная роспись, на которой мы очень хотим быть в окружении любящих людей в ЗАГС'е "Дом Дружбы Народов"</div>
+        </div>
+
+        <div class="font-passions-white" style="font-size: 52px; margin-top: 30px;">23.08.2026</div>
+        <div class="photo-holder-2"></div>
+        
+        <div class="timeline-item">
+            <div class="timeline-time">17:00</div>
+            <div class="dress-code-text">Вечеринка у бассейна в кругу друзей</div>
+        </div>
+
+        <div class="font-passions-white" style="font-size: 56px; margin-top: 40px; margin-bottom: 10px;">Дресс-код</div>
+        <p class="dress-code-text">Мы хотим создать гармоничную атмосферу, поэтому просим вас поддержать цветовую гамму нашей свадьбы в ваших нарядах:</p>
+        
+        <div class="color-palette">
+            <div class="color-circle" style="background-color: #F8E5D1;" title="Белый"></div>
+            <div class="color-circle" style="background-color: #EED6B5;" title="Бежевый"></div>
+            <div class="color-circle" style="background-color: #654229;" title="Коричневый"></div> 
+        </div>
+    </div> <!-- ИСПРАВЛЕНО: Теперь бордовая секция корректно закрывается здесь -->
+
+    <!-- БЛОК 3: АНКЕТА ГОСТЯ -->
+    <div class="section-white" style="background-color: #f7f3ed;">
+        <div class="font-passions" style="font-size: 64px; margin-bottom: 5px;">Анкета гостя</div>
+        <p class="description" style="margin-bottom: 25px;">Пожалуйста, ответьте на вопросы ниже, чтобы мы могли сделать праздник комфортнее.</p>
+
+        <form id="weddingForm">
+            <div class="form-group">
+                <label for="name">Ваше Имя и Фамилия</label>
+                <input type="text" id="name" required placeholder="Иван и Мария">
+            </div>
+
+            <div class="form-group">
+                <label for="attendance">Планируете присутствовать?</label>
+                <select id="attendance" required>
+                    <option value="Да, я еду">Да, я еду</option>
+                    <option value="К сожалению, не смогу">К сожалению, не смогу</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="drinks">Что предпочитаете из напитков?</label>
+                <textarea id="drinks" rows="3" required placeholder="Например: сухое белое вино..."></textarea>
+            </div>
+
+            <button type="submit">Отправить ответ</button>
+        </form>
+    </div>
+
+</div>
+
 
     <script>
         // СЮДА ВСТАВЬТЕ ВАШУ ССЫЛКУ НА GOOGLE WEB APP
